@@ -90,7 +90,7 @@ O "KidsHelper" oferece um ambiente interativo onde as crianças completam desafi
  </p>
 
  * <p>
-    <img align="left" title="vscode" height="30px" src="https://github.com/tandpfun/skill-icons/raw/main/icons/MySQL-Dark.svg"/>
+    <img align="left" title="sql" height="30px" src="https://github.com/tandpfun/skill-icons/raw/main/icons/MySQL-Dark.svg"/>
    MySQL 
  </p>
 
@@ -99,6 +99,22 @@ O "KidsHelper" oferece um ambiente interativo onde as crianças completam desafi
    <img align="left" title="vscode" height="30px" src="https://user-images.githubusercontent.com/76211125/227505063-5839c5e0-9524-41ff-9d24-ce6cbaf217a6.png"/>
    Visual Studio Code 
  </p>
+ 
+* <p>
+   <img align="left" title="js" height="30px" src="https://github.com/user-attachments/assets/f62742f1-4d23-4ffd-9c06-0bf736e08861"/>
+   JavaScript 
+ </p>
+
+ * <p>
+   <img align="left" title="html" height="30px" src="https://github.com/user-attachments/assets/26dccb82-f0cf-477e-a96c-06725ce9210d"/>
+   HTML 
+ </p>
+
+ * <p>
+   <img align="left" title="html" height="30px" src="https://github.com/user-attachments/assets/68fcc784-67a1-47c3-bb9a-32b9c29ea5aa"/>
+   CSS 
+ </p>
+ 
  
 
     
