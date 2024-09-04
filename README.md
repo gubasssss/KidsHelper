@@ -6,7 +6,6 @@
 <p align="center">
     <a href="#visao"> Visão geral </a> | 
     <a href="#solucao">Solução proposta</a> |
-    <a href="#mvp">MVP</a> |  
     <a href="#backlog">Backlog</a> | 
     <a href="#sprint">Relatório das sprints</a> | 
     <a href="#tecnologia">Tecnologias utilizadas</a> | 
@@ -32,13 +31,6 @@ O "KidsHelper" é um aplicativo educativo voltado para crianças de 6 a 12 anos,
 O "KidsHelper" oferece um ambiente interativo onde as crianças completam desafios diários, ganham pontos e trocam por recompensas virtuais. O aplicativo inclui avatares personalizáveis, jogos educativos e um sistema de metas. Para os pais, há ferramentas de monitoramento e personalização de tarefas, permitindo um acompanhamento eficaz e motivador do desenvolvimento das crianças.
 
 
-
-<span id="mvp">
-    
-<h2 aling="center"> 🧩MVP </h2>
-
- 
-
     
 </p>
 <span id="backlog">
@@ -48,11 +40,20 @@ O "KidsHelper" oferece um ambiente interativo onde as crianças completam desafi
 
 | Sprint | Tarefas |  User Story   | Item |  Tempo Estimado   | Status   | Dificuldade | 
 | :----: | :----: | :----: | :----: | :----: | :----: | :----: |
-| 2 | 2 | Eu como cliente, desejo poder converter instruções em linguagem natural,para linguagem de máquina e obter as informações correspondentes do banco de dados. | Banco de Dados | 12h | :white_check_mark:| 7 |
-| 2 | 2 | Eu como cliente, quero uma interface já utilizavel no ChatBot. | ChatBot | 8h | :white_check_mark:| 5 |
-| 3 | 3 | Eu como cliente,	quero poder mudar e utilizar diferentes bancos de dados na interface do chatbot | Banco de Dados | 7h |:white_check_mark:   | 8 |
-| 4 | 4 | Eu como cliente,quero uma interface limpa e fácil de ser utilizada | ChatBot   | 4h | :white_check_mark:  | 6 |
-| 4 | 5 | Eu como cliente,quero poder utilizar outras opções de inteligência artificial dentro da interface do chatbot | ChatBot   | 9h| :white_check_mark:          |9 |
+| 3 | 1 | Como criança, quero criar um avatar personalizável para me representar no aplicativo. | Personalização | 10h |❌ | 6 |
+| 3 | 2 |  Como pai, quero criar uma conta e um perfil para meu filho, para que eu possa acompanhar seu progresso. | Gerenciamento de Contas | 5h |❌| 5 |
+| 3 | 3 | Como criança, quero ver uma tela inicial com os desafios diários e uma visão geral das minhas tarefas. | Interface do Usuário | 6h |❌   | 4 |
+| 3 | 4 | Como criança, quero completar desafios diários para ganhar recompensas virtuais. | Gamificação   | 15h | ❌ | 7 |
+| 3 | 5 | Como pai, quero receber notificações sobre as tarefas concluídas pelo meu filho, para que eu possa acompanhar seu progresso. | Notificações e Monitoramento   | 8h| ❌ |5 |
+| 3 | 6 | Como criança, quero escolher recompensas virtuais (como roupas para o avatar) ao completar desafios. | Recompensas e Incentivos  | 6h| ❌         |5 |
+| 4 | 7 | Como criança, quero jogar jogos educativos que me ajudem a aprender sobre organização e responsabilidade. | Educação e Aprendizado   | 15h| ❌         |6 |
+| 4 | 8 | Como criança, quero estabelecer metas semanais de organização e responsabilidade para acompanhar meu progresso. | Metas e Planejamento   | 9h| ❌         |5|
+| 4 | 9 | Como pai, quero ver o progresso semanal do meu filho em suas metas de organização, para incentivá-lo adequadamente. | Monitoramento de Progresso   | 5h| ❌ |5|
+| 4 | 10 |Como criança, quero receber feedback em tempo real ao realizar minhas tarefas, para saber se estou indo bem. | Interatividade   | 10h| ❌   |7 |
+| 4 | 11 | Como pai, quero poder personalizar as recompensas e desafios do meu filho para adequá-los melhor às suas necessidades. | Personalização   | 8h| ❌  |6 |
+| 4 | 12 | Como criança, quero que meus pais possam criar tarefas específicas para mim, para que eu possa ganhar pontos adicionais. | Personalização de Tarefas   | 5h| ❌ |5 |
+
+
 
 
 <span id="sprint">
