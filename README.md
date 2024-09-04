@@ -1,5 +1,7 @@
 <span id="topo">
-    
+
+![Leonardo_Phoenix_Crie_uma_logo_minimalista_e_atrativa_para_o_a_1 (1)](https://github.com/user-attachments/assets/23ae16a4-b2ea-4589-b2ab-3ddf315c05f0)
+
 
 <p align="center">
     <a href="#visao"> Visão geral </a> | 
