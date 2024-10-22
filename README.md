@@ -40,7 +40,6 @@ O "KidsHelper" oferece um ambiente interativo onde as crianças completam desafi
 
 | Sprint | Tarefas |  User Story   | Item |  Tempo Estimado   | Status   | Dificuldade | 
 | :----: | :----: | :----: | :----: | :----: | :----: | :----: |
-| 2 | 1 | Como cliente quero um protótipo inical do meu projeto. | Wireframe | 8h | ✅ | 4 |
 | 3 | 2 | Como criança, quero criar um avatar personalizável para me representar no aplicativo. | Personalização | 10h |❌ | 6 |
 | 3 | 3 |  Como pai, quero criar uma conta e um perfil para meu filho, para que eu possa acompanhar seu progresso. | Gerenciamento de Contas | 5h |❌| 5 |
 | 3 | 4 | Como criança, quero ver uma tela inicial com os desafios diários e uma visão geral das minhas tarefas. | Interface do Usuário | 6h |❌   | 4 |
