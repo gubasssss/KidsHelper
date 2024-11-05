@@ -1,70 +1,146 @@
-import { Image, StyleSheet, Platform } from 'react-native';
+import { Link } from 'expo-router';
+import React, { useEffect, useState } from 'react';
+import { View, Image, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import axios from 'axios';
 
-import { HelloWave } from '@/components/HelloWave';
-import ParallaxScrollView from '@/components/ParallaxScrollView';
-import { ThemedText } from '@/components/ThemedText';
-import { ThemedView } from '@/components/ThemedView';
 
-export default function HomeScreen() {
+export default function InitialScreen() {
+  const [users, setUsers] = useState([]);
+
+  useEffect(() => {
+    // Altere para o URL do seu servidor se estiver em outro local (ou IP da rede local)
+    axios.get('http://localhost:3000/users')
+      .then(response => {
+        setUsers(response.data);
+      })
+      .catch(error => {
+        console.error('Erro ao buscar usuários:', error);
+      });
+  }, []);
+
   return (
-    <ParallaxScrollView
-      headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
-      headerImage={
-        <Image
-          source={require('@/assets/images/partial-react-logo.png')}
-          style={styles.reactLogo}
-        />
-      }>
-      <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Welcome!</ThemedText>
-        <HelloWave />
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 1: Try it</ThemedText>
-        <ThemedText>
-          Edit <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> to see changes.
-          Press{' '}
-          <ThemedText type="defaultSemiBold">
-            {Platform.select({ ios: 'cmd + d', android: 'cmd + m' })}
-          </ThemedText>{' '}
-          to open developer tools.
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 2: Explore</ThemedText>
-        <ThemedText>
-          Tap the Explore tab to learn more about what's included in this starter app.
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 3: Get a fresh start</ThemedText>
-        <ThemedText>
-          When you're ready, run{' '}
-          <ThemedText type="defaultSemiBold">npm run reset-project</ThemedText> to get a fresh{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> directory. This will move the current{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> to{' '}
-          <ThemedText type="defaultSemiBold">app-example</ThemedText>.
-        </ThemedText>
-      </ThemedView>
-    </ParallaxScrollView>
+    <View style={styles.container}>
+      <Image
+        source={require('@/assets/images/kids-helper-logo.png')} // Altere o caminho conforme a localização do logo
+        style={styles.title2}
+      />
+      <Image
+      source={require('@/assets/images/coracao-verde.png')}
+      style={styles.image3}
+      />
+      <Image
+      source={require('@/assets/images/simbolo-primeiro.png')}
+      style={styles.image4}
+      />
+      <Text style={styles.title}>Melhore a organização do seu filho</Text>
+      <Text style={styles.subtitle}>
+        Incentive a organização, responsabilidade e autonomia de forma divertida!!!{'\n'}
+        Venha fazer parte, faça o cadastro aqui
+      </Text>
+      <Image
+        source = {require('@/assets/images/seta-laranja.png')}
+        style={styles.image2}
+      />
+
+      <View style={styles.buttonContainer}>
+        <Link href={"/(tabs)/login"} asChild>
+        <TouchableOpacity style={styles.button}>
+          <Text style={styles.buttonText}>Entrar</Text>
+          <Text style={styles.arrow}>➔</Text>
+        </TouchableOpacity>
+        </Link>
+
+        <Link href ={"/(tabs)/signup"} asChild>
+        <TouchableOpacity style={styles.playButton}>
+          <Text style={styles.playIcon}>➔</Text>
+        </TouchableOpacity>
+        </Link>
+      </View>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
-  titleContainer: {
+  container: {
+    flex: 1,
+    backgroundColor: '#F6F5F3',
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingHorizontal: 20,
+  },
+  logo: {
+    width: 120,
+    height: 120,
+    marginBottom: 20,
+  },
+  title: {
+    fontSize: 40,
+    fontWeight: 'bold',
+    color: '#000',
+    textAlign: 'center',
+    marginBottom: 10,
+  },
+  subtitle: {
+    fontSize: 14,
+    color: '#000',
+    textAlign: 'center',
+    marginBottom: 30,
+  },
+  buttonContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 8,
+    gap: 10,
   },
-  stepContainer: {
-    gap: 8,
-    marginBottom: 8,
+  button: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: '#67C77D',
+    paddingVertical: 15,
+    paddingHorizontal: 30,
+    borderRadius: 25,
   },
-  reactLogo: {
-    height: 178,
-    width: 290,
-    bottom: 0,
-    left: 0,
-    position: 'absolute',
+  buttonText: {
+    color: '#FFFFFF',
+    fontSize: 16,
+    fontWeight: 'bold',
+    marginRight: 5,
   },
+  arrow: {
+    color: '#FFA500',
+    fontSize: 18,
+  },
+  playButton: {
+    backgroundColor: '#FFFFFF',
+    paddingVertical: 10,
+    paddingHorizontal: 30,    
+    borderRadius: 25,
+    elevation: 5, // Sombra no Android
+    shadowColor: '#000', // Sombra no iOS
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.3,
+    shadowRadius: 3.84,
+  },
+  playIcon: {
+    fontSize: 18,
+    color: '#007FFF',
+  },
+  title2:{
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: '#000',
+    textAlign: 'center',
+    marginBottom: -80,
+  },
+  image2:{
+    marginLeft:250
+
+  },
+  image3:{
+    marginLeft:300
+  },
+  image4:{
+    marginLeft:500
+
+  }
+
 });
