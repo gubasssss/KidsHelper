@@ -23,11 +23,12 @@ db.connect((err) => {
   console.log('Conectado ao MySQL');
 });
 
+// Permitir que o Express entenda JSON
 app.use(express.json());
 
-// Exemplo de rota
+// Rota GET para buscar usuários
 app.get('/users', (req, res) => {
-  db.query('SELECT * FROM users', (err, results) => {
+  db.query('SELECT * FROM login', (err, results) => {
     if (err) {
       res.status(500).json({ error: 'Erro ao buscar usuários' });
     } else {
@@ -36,6 +37,22 @@ app.get('/users', (req, res) => {
   });
 });
 
+// Rota POST para inserir um novo usuário
+app.post('/login', (req, res) => {
+  console.log('Requisição recebida:', req.body); // Adicione isso para depuração
+  const { nome, sobrenome, email_pai, idade, senha } = req.body;
+
+  const sql = 'INSERT INTO login (nome, sobrenome, email_pai, idade, senha) VALUES (?, ?, ?, ?, ?)';
+  db.query(sql, [nome, sobrenome, email_pai, idade, senha], (err, results) => {
+      if (err) {
+          console.error('Erro ao inserir usuário:', err);
+          return res.status(500).json({ error: 'Erro ao inserir usuário' });
+      }
+      res.status(201).json({ message: 'Usuário inserido com sucesso', userId: results.insertId });
+  });
+});
+
+// Iniciar o servidor
 app.listen(port, () => {
   console.log(`Servidor rodando em http://localhost:${port}`);
 });

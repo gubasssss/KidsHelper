@@ -2,19 +2,16 @@ import React, { useState } from "react";
 import { SafeAreaView, View, Text, StyleSheet, Image, TextInput, TouchableOpacity, Alert } from "react-native";
 import axios from "axios";
 import { Link } from "expo-router";
-import { useRouter } from "expo-router";
-import { Stack } from "expo-router";
-
-
 
 export default function SignUp() {
     const[form,setForm] = useState({
+        nome:'',
+        sobrenome:'',
         email_pai:'',
+        idade:'',
         senha:'',
+        confirmarsenha:''
         })
-
-    const router = useRouter();
-
 
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: '#F6F5F3' }}>
@@ -29,7 +26,8 @@ export default function SignUp() {
                     </View>
                     <View style={styles.textContainer}>
                         <View style={styles.input}>
-    
+
+
 
                             <Text style={styles.inputLabel}>Email do Responsável:</Text>
                             <TextInput
@@ -45,21 +43,25 @@ export default function SignUp() {
                                 onChangeText={senha => setForm({...form,senha})}
                                 />
 
+                            <Text style={styles.inputLabel}>Confirmar Senha:</Text>
+                            
+                            <TextInput
+                                style={styles.inputControl}
+                                value={form.confirmarsenha}
+                                onChangeText={confirmarsenha => setForm({...form,confirmarsenha})}
+                                />
 
-<Link href="/(tabs)/home?user=Henrique" asChild>
-<TouchableOpacity style={styles.button} >
-          <Text style={styles.buttonText}>Entrar</Text>
+
+<TouchableOpacity style={styles.button}>
+          <Text style={styles.buttonText}>Cadastrar</Text>
           <Text style={styles.arrow}>➔</Text>
         </TouchableOpacity>
-        </Link>
-
-        <Link href ={"/"} asChild>
+        <Link href ={"/(tabs)/initialscreenpais"} asChild>
         <TouchableOpacity style={styles.button2} >
           <Text style={styles.buttonText}></Text>
           <Text style={styles.arrow2}>←</Text>
         </TouchableOpacity>
         </Link>
-
 
 
                         </View>
@@ -82,7 +84,7 @@ const styles = StyleSheet.create({
     },
     imageContainer: {
         position: 'absolute',
-        top: -650, // Ajuste a posição da imagem
+        top: -750, // Ajuste a posição da imagem
     },
     headerImg: {
         width: 500, // Ajuste o tamanho conforme necessário
@@ -90,7 +92,7 @@ const styles = StyleSheet.create({
     },
     textContainer: {
         position: 'absolute',
-        top:-490, // Posição do texto em relação à imagem
+        top:-600, // Posição do texto em relação à imagem
     },
     input:{},
     inputLabel:{
@@ -133,13 +135,7 @@ const styles = StyleSheet.create({
         color: '#FFA500',
         fontSize: 18,
       },
-      arrow2:{
-        color: '#FFA500',
-        fontSize: 40,
-        marginLeft:-20,
-        marginTop:-15
-      },
-      button2: {
+      button2:{
         flexDirection: 'row',
         alignItems: 'center',
         backgroundColor: '#67C77D',
@@ -151,6 +147,13 @@ const styles = StyleSheet.create({
         width:70,
         marginLeft:-70
       },
+      arrow2:{
+        color: '#FFA500',
+        fontSize: 40,
+        marginLeft:-20,
+        marginTop:-15
+      }
+
     
 
 });

@@ -4,8 +4,9 @@ import { View, Image, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import axios from 'axios';
 
 
-export default function InitialScreen() {
+export default function InitialScreenPais() {
   const [users, setUsers] = useState([]);
+
 
 
   return (
@@ -22,7 +23,7 @@ export default function InitialScreen() {
       source={require('@/assets/images/simbolo-primeiro.png')}
       style={styles.image4}
       />
-      <Text style={styles.title}>Melhore a organização do seu filho</Text>
+      <Text style={styles.title}>Entre e acompanhe o desempenho de seu filho!!!</Text>
       <Text style={styles.subtitle}>
         Incentive a organização, responsabilidade e autonomia de forma divertida!!!{'\n'}
         Venha fazer parte, faça o cadastro aqui
@@ -33,14 +34,14 @@ export default function InitialScreen() {
       />
 
       <View style={styles.buttonContainer}>
-        <Link href={"/(tabs)/login"} asChild>
+        <Link href={"/(tabs)/loginpais"} asChild>
         <TouchableOpacity style={styles.button}>
           <Text style={styles.buttonText}>Entrar</Text>
           <Text style={styles.arrow}>➔</Text>
         </TouchableOpacity>
         </Link>
 
-        <Link href ={"/(tabs)/signup"} asChild>
+        <Link href ={"/(tabs)/signuppais"} asChild>
         <TouchableOpacity style={styles.playButton}>
           <Text style={styles.playIcon}>➔</Text>
         </TouchableOpacity>

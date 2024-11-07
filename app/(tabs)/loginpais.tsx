@@ -7,7 +7,7 @@ import { Stack } from "expo-router";
 
 
 
-export default function SignUp() {
+export default function SignUpPais() {
     const[form,setForm] = useState({
         email_pai:'',
         senha:'',
@@ -46,14 +46,14 @@ export default function SignUp() {
                                 />
 
 
-<Link href="/(tabs)/home?user=Henrique" asChild>
+<Link href="/(tabs)/homepais" asChild>
 <TouchableOpacity style={styles.button} >
           <Text style={styles.buttonText}>Entrar</Text>
           <Text style={styles.arrow}>➔</Text>
         </TouchableOpacity>
         </Link>
 
-        <Link href ={"/"} asChild>
+        <Link href ={"/(tabs)/initialscreenpais"} asChild>
         <TouchableOpacity style={styles.button2} >
           <Text style={styles.buttonText}></Text>
           <Text style={styles.arrow2}>←</Text>
