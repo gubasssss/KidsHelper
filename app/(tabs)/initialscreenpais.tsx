@@ -3,11 +3,8 @@ import React, { useEffect, useState } from 'react';
 import { View, Image, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import axios from 'axios';
 
-
 export default function InitialScreenPais() {
   const [users, setUsers] = useState([]);
-
-
 
   return (
     <View style={styles.container}>
@@ -16,12 +13,12 @@ export default function InitialScreenPais() {
         style={styles.title2}
       />
       <Image
-      source={require('@/assets/images/coracao-verde.png')}
-      style={styles.image3}
+        source={require('@/assets/images/coracao-verde.png')}
+        style={styles.image3}
       />
       <Image
-      source={require('@/assets/images/simbolo-primeiro.png')}
-      style={styles.image4}
+        source={require('@/assets/images/simbolo-primeiro.png')}
+        style={styles.image4}
       />
       <Text style={styles.title}>Entre e acompanhe o desempenho de seu filho!!!</Text>
       <Text style={styles.subtitle}>
@@ -29,22 +26,29 @@ export default function InitialScreenPais() {
         Venha fazer parte, faça o cadastro aqui
       </Text>
       <Image
-        source = {require('@/assets/images/seta-laranja.png')}
+        source={require('@/assets/images/seta-laranja.png')}
         style={styles.image2}
       />
 
       <View style={styles.buttonContainer}>
-        <Link href={"/(tabs)/loginpais"} asChild>
-        <TouchableOpacity style={styles.button}>
-          <Text style={styles.buttonText}>Entrar</Text>
-          <Text style={styles.arrow}>➔</Text>
-        </TouchableOpacity>
+        <Link href={"/(tabs)/home"} asChild>
+          <TouchableOpacity style={styles.backButton}>
+            <Text style={styles.arrowBack}>←</Text>
+            <Text style={styles.buttonText}>Voltar</Text>
+          </TouchableOpacity>
         </Link>
 
-        <Link href ={"/(tabs)/signuppais"} asChild>
-        <TouchableOpacity style={styles.playButton}>
-          <Text style={styles.playIcon}>➔</Text>
-        </TouchableOpacity>
+        <Link href={"/(tabs)/loginpais"} asChild>
+          <TouchableOpacity style={styles.button}>
+            <Text style={styles.buttonText}>Entrar</Text>
+            <Text style={styles.arrow}>➔</Text>
+          </TouchableOpacity>
+        </Link>
+
+        <Link href={"/(tabs)/signuppais"} asChild>
+          <TouchableOpacity style={styles.playButton}>
+            <Text style={styles.playIcon}>➔</Text>
+          </TouchableOpacity>
         </Link>
       </View>
     </View>
@@ -58,11 +62,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     paddingHorizontal: 20,
-  },
-  logo: {
-    width: 120,
-    height: 120,
-    marginBottom: 20,
   },
   title: {
     fontSize: 40,
@@ -81,7 +80,15 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     gap: 10,
-    paddingBottom:100,
+    paddingBottom: 100,
+  },
+  backButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: '#67C77D',
+    paddingVertical: 15,
+    paddingHorizontal: 20,
+    borderRadius: 25,
   },
   button: {
     flexDirection: 'row',
@@ -101,13 +108,18 @@ const styles = StyleSheet.create({
     color: '#FFA500',
     fontSize: 18,
   },
+  arrowBack: {
+    color: '#FFA500',
+    fontSize: 18,
+    marginRight: 5,
+  },
   playButton: {
     backgroundColor: '#FFFFFF',
     paddingVertical: 10,
-    paddingHorizontal: 30,    
+    paddingHorizontal: 30,
     borderRadius: 25,
-    elevation: 5, // Sombra no Android
-    shadowColor: '#000', // Sombra no iOS
+    elevation: 5,
+    shadowColor: '#000',
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.3,
     shadowRadius: 3.84,
@@ -116,23 +128,20 @@ const styles = StyleSheet.create({
     fontSize: 18,
     color: '#007FFF',
   },
-  title2:{
+  title2: {
     fontSize: 24,
     fontWeight: 'bold',
     color: '#000',
     textAlign: 'center',
     marginBottom: -80,
   },
-  image2:{
-    marginLeft:250
-
+  image2: {
+    marginLeft: 350,
   },
-  image3:{
-    marginLeft:200
+  image3: {
+    marginLeft: 200,
   },
-  image4:{
-    marginLeft:310
-
-  }
-
+  image4: {
+    marginLeft: 310,
+  },
 });

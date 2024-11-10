@@ -15,6 +15,10 @@ export default function RootLayout() {
       <Stack.Screen name="loginpais" options={{ headerShown: false }}  />
       <Stack.Screen name="initialscreenpais" options={{ headerShown: false }}  />
       <Stack.Screen name="signuppais" options={{ headerShown: false }}  />
+      <Stack.Screen name="homepais" options={{ headerShown: false }}  />
+      <Stack.Screen name="tarefas" options={{ headerShown: false }}  />
+
+
 
 
 
